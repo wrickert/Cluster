@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name ESP32-WROOM-32D)(type Legacy)(uri /home/william/Documents/Projects/Gl1200/Cluster/footprints/ESP32-WROOM-32D.lib)(options "")(descr ""))
+  (lib (name Cluster-rescue)(type Legacy)(uri ${KIPRJMOD}/Cluster-rescue.lib)(options "")(descr ""))
 )
