@@ -1,4 +1,4 @@
-12842684249246451
+12848908202298053
 1909763-1
 TE_1909763-1
 
@@ -22036,14 +22036,14 @@ CySat1
 0
 0
 CysatSide
-CySatLogo
+CysatLogo
 
 
 0
 0
 0
 CysatSide
-CysatLogo
+CySatLogo
 
 
 0
@@ -47802,6 +47802,34 @@ RF transceiver SMD style
 0
 12
 12
+S4Badge
+Gauge
+
+
+0
+0
+0
+S4Badge
+Gauge_mask
+
+
+0
+0
+0
+S4Badge
+Gauge_Open
+
+
+0
+0
+0
+S4Badge
+ReflowPad
+
+
+0
+1
+1
 Shielding_Cabinets
 Laird_Technologies_97-2002_25.40x25.40mm
 Laird Technologies 97-2002 EZ PEEL Shielding Cabinet One Piece SMD 25.40x25.40mm

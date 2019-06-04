@@ -1,6 +1,40 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# Cluster-rescue_+12V-power
+#
+DEF Cluster-rescue_+12V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "Cluster-rescue_+12V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +12V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# Cluster-rescue_1N5822-Diode
+#
+DEF Cluster-rescue_1N5822-Diode D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Cluster-rescue_1N5822-Diode" 0 -100 50 H V C CNN
+F2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ D*DO?201AD*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Cluster-rescue_AiP8563-Cluster
 #
 DEF Cluster-rescue_AiP8563-Cluster U 0 40 Y Y 1 F N
@@ -21,45 +55,68 @@ X VDD 8 550 100 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Cluster-rescue_LIS3DHTR-LIS3DHTR
+# Cluster-rescue_Battery_Cell-Device
 #
-DEF Cluster-rescue_LIS3DHTR-LIS3DHTR U 0 40 Y Y 1 L N
-F0 "U" -500 520 50 H V L BNN
-F1 "Cluster-rescue_LIS3DHTR-LIS3DHTR" -500 -700 50 H V L BNN
-F2 "LGA16R50P5X3_300X300X100N" 0 0 50 H I L BNN
-F3 "LIS3DHTR" 0 0 50 H I L BNN
-F4 "https://www.digikey.com/product-detail/en/stmicroelectronics/LIS3DHTR/497-10613-1-ND/2334355?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" 0 0 50 H I L BNN
-F5 "MEMS digital output motion sensor ultra low-power high performance 3-axes nano accelerometer" 0 0 50 H I L BNN
-F6 "STMicroelectronics" 0 0 50 H I L BNN
-F7 "LGA-16 STMicroelectronics" 0 0 50 H I L BNN
-F8 "497-10613-1-ND" 0 0 50 H I L BNN
+DEF Cluster-rescue_Battery_Cell-Device BT 0 0 N N 1 F N
+F0 "BT" 100 100 50 H V L CNN
+F1 "Cluster-rescue_Battery_Cell-Device" 100 0 50 H V L CNN
+F2 "" 0 60 50 V I C CNN
+F3 "" 0 60 50 V I C CNN
 DRAW
-P 2 0 0 10 -500 -600 500 -600 N
-P 2 0 0 10 -500 500 -500 -600 N
-P 2 0 0 10 500 -600 500 500 N
-P 2 0 0 10 500 500 -500 500 N
-X VDD_IO 1 600 300 100 L 40 40 0 0 W
-X RES 10 600 200 100 L 40 40 0 0 W
-X INT1 11 -600 100 100 R 40 40 0 0 I
-X GND 12 600 -500 100 L 40 40 0 0 W
-X ADC3 13 600 -200 100 L 40 40 0 0 I
-X VDD 14 600 400 100 L 40 40 0 0 W
-X ADC2 15 600 -100 100 L 40 40 0 0 I
-X ADC1 16 600 0 100 L 40 40 0 0 I
-X SCL/SPC 4 -600 -200 100 R 40 40 0 0 I
-X GND 5 600 -500 100 L 40 40 0 0 W
-X SDA/SDI/SDO 6 -600 -400 100 R 40 40 0 0 B
-X SDO/SA0 7 -600 -300 100 R 40 40 0 0 O
-X CS 8 -600 400 100 R 40 40 0 0 I
-X INT2 9 -600 0 100 R 40 40 0 0 I
+S -90 70 90 60 0 1 0 F
+S -62 47 58 27 0 1 0 F
+P 2 0 1 0 0 30 0 0 N
+P 2 0 1 0 0 70 0 100 N
+P 2 0 1 10 20 135 60 135 N
+P 2 0 1 10 40 155 40 115 N
+X + 1 0 200 100 D 50 50 1 1 P
+X - 2 0 -100 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x01
+# Cluster-rescue_CP1-Device
 #
-DEF Connector_Generic_Conn_01x01 J 0 40 Y N 1 F N
+DEF Cluster-rescue_CP1-Device C 0 10 N N 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "Cluster-rescue_CP1-Device" 25 -100 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ CP_*
+$ENDFPLIST
+DRAW
+A 0 -150 128 1287 513 0 1 20 N -80 -50 80 -50
+P 2 0 1 20 -80 30 80 30 N
+P 2 0 1 0 -70 90 -30 90 N
+P 2 0 1 0 -50 70 -50 110 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 130 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Cluster-rescue_C_Small-Device
+#
+DEF Cluster-rescue_C_Small-Device C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "Cluster-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Cluster-rescue_Conn_01x01-Connector_Generic
+#
+DEF Cluster-rescue_Conn_01x01-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_Conn_01x01" 0 -100 50 H V C CNN
+F1 "Cluster-rescue_Conn_01x01-Connector_Generic" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -72,11 +129,11 @@ X Pin_1 1 -200 0 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x02
+# Cluster-rescue_Conn_01x02-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+DEF Cluster-rescue_Conn_01x02-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
+F1 "Cluster-rescue_Conn_01x02-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -91,11 +148,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x03
+# Cluster-rescue_Conn_01x03-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x03 J 0 40 Y N 1 F N
+DEF Cluster-rescue_Conn_01x03-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic_Conn_01x03" 0 -200 50 H V C CNN
+F1 "Cluster-rescue_Conn_01x03-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -112,11 +169,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x06
+# Cluster-rescue_Conn_01x06-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x06 J 0 40 Y N 1 F N
+DEF Cluster-rescue_Conn_01x06-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Generic_Conn_01x06" 0 -400 50 H V C CNN
+F1 "Cluster-rescue_Conn_01x06-Connector_Generic" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -139,79 +196,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x07
+# Cluster-rescue_Conn_01x40-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x07 J 0 40 Y N 1 F N
-F0 "J" 0 400 50 H V C CNN
-F1 "Connector_Generic_Conn_01x07" 0 -400 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??_*
-$ENDFPLIST
-DRAW
-S -50 -295 0 -305 1 1 6 N
-S -50 -195 0 -205 1 1 6 N
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 105 0 95 1 1 6 N
-S -50 205 0 195 1 1 6 N
-S -50 305 0 295 1 1 6 N
-S -50 350 50 -350 1 1 10 f
-X Pin_1 1 -200 300 150 R 50 50 1 1 P
-X Pin_2 2 -200 200 150 R 50 50 1 1 P
-X Pin_3 3 -200 100 150 R 50 50 1 1 P
-X Pin_4 4 -200 0 150 R 50 50 1 1 P
-X Pin_5 5 -200 -100 150 R 50 50 1 1 P
-X Pin_6 6 -200 -200 150 R 50 50 1 1 P
-X Pin_7 7 -200 -300 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Generic_Conn_01x12
-#
-DEF Connector_Generic_Conn_01x12 J 0 40 Y N 1 F N
-F0 "J" 0 600 50 H V C CNN
-F1 "Connector_Generic_Conn_01x12" 0 -700 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??_*
-$ENDFPLIST
-DRAW
-S -50 -595 0 -605 1 1 6 N
-S -50 -495 0 -505 1 1 6 N
-S -50 -395 0 -405 1 1 6 N
-S -50 -295 0 -305 1 1 6 N
-S -50 -195 0 -205 1 1 6 N
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 105 0 95 1 1 6 N
-S -50 205 0 195 1 1 6 N
-S -50 305 0 295 1 1 6 N
-S -50 405 0 395 1 1 6 N
-S -50 505 0 495 1 1 6 N
-S -50 550 50 -650 1 1 10 f
-X Pin_1 1 -200 500 150 R 50 50 1 1 P
-X Pin_10 10 -200 -400 150 R 50 50 1 1 P
-X Pin_11 11 -200 -500 150 R 50 50 1 1 P
-X Pin_12 12 -200 -600 150 R 50 50 1 1 P
-X Pin_2 2 -200 400 150 R 50 50 1 1 P
-X Pin_3 3 -200 300 150 R 50 50 1 1 P
-X Pin_4 4 -200 200 150 R 50 50 1 1 P
-X Pin_5 5 -200 100 150 R 50 50 1 1 P
-X Pin_6 6 -200 0 150 R 50 50 1 1 P
-X Pin_7 7 -200 -100 150 R 50 50 1 1 P
-X Pin_8 8 -200 -200 150 R 50 50 1 1 P
-X Pin_9 9 -200 -300 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Generic_Conn_01x40
-#
-DEF Connector_Generic_Conn_01x40 J 0 40 Y N 1 F N
+DEF Cluster-rescue_Conn_01x40-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 2000 50 H V C CNN
-F1 "Connector_Generic_Conn_01x40" 0 -2100 50 H V C CNN
+F1 "Cluster-rescue_Conn_01x40-Connector_Generic" 0 -2100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -302,68 +291,11 @@ X Pin_9 9 -200 1100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Battery_Cell
+# Cluster-rescue_Crystal-Device
 #
-DEF Device_Battery_Cell BT 0 0 N N 1 F N
-F0 "BT" 100 100 50 H V L CNN
-F1 "Device_Battery_Cell" 100 0 50 H V L CNN
-F2 "" 0 60 50 V I C CNN
-F3 "" 0 60 50 V I C CNN
-DRAW
-S -90 70 90 60 0 1 0 F
-S -62 47 58 27 0 1 0 F
-P 2 0 1 0 0 30 0 0 N
-P 2 0 1 0 0 70 0 100 N
-P 2 0 1 10 20 135 60 135 N
-P 2 0 1 10 40 155 40 115 N
-X + 1 0 200 100 D 50 50 1 1 P
-X - 2 0 -100 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_CP1
-#
-DEF Device_CP1 C 0 10 N N 1 F N
-F0 "C" 25 100 50 H V L CNN
-F1 "Device_CP1" 25 -100 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- CP_*
-$ENDFPLIST
-DRAW
-A 0 -150 128 1287 513 0 1 20 N -80 -50 80 -50
-P 2 0 1 20 -80 30 80 30 N
-P 2 0 1 0 -70 90 -30 90 N
-P 2 0 1 0 -50 70 -50 110 N
-X ~ 1 0 150 110 D 50 50 1 1 P
-X ~ 2 0 -150 130 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_C_Small
-#
-DEF Device_C_Small C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "Device_C_Small" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 13 -60 -20 60 -20 N
-P 2 0 1 12 -60 20 60 20 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Crystal
-#
-DEF Device_Crystal Y 0 40 N N 1 F N
+DEF Cluster-rescue_Crystal-Device Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "Device_Crystal" 0 -150 50 H V C CNN
+F1 "Cluster-rescue_Crystal-Device" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -380,11 +312,11 @@ X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Crystal_Small
+# Cluster-rescue_Crystal_Small-Device
 #
-DEF Device_Crystal_Small Y 0 40 N N 1 F N
+DEF Cluster-rescue_Crystal_Small-Device Y 0 40 N N 1 F N
 F0 "Y" 0 100 50 H V C CNN
-F1 "Device_Crystal_Small" 0 -100 50 H V C CNN
+F1 "Cluster-rescue_Crystal_Small-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -399,11 +331,11 @@ X 2 2 100 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D_ALT
+# Cluster-rescue_D_ALT-Device
 #
-DEF Device_D_ALT D 0 40 N N 1 F N
+DEF Cluster-rescue_D_ALT-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_D_ALT" 0 -100 50 H V C CNN
+F1 "Cluster-rescue_D_ALT-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -421,11 +353,65 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_L_Small
+# Cluster-rescue_LIS3DHTR-LIS3DHTR
 #
-DEF Device_L_Small L 0 10 N N 1 F N
+DEF Cluster-rescue_LIS3DHTR-LIS3DHTR U 0 40 Y Y 1 L N
+F0 "U" -500 520 50 H V L BNN
+F1 "Cluster-rescue_LIS3DHTR-LIS3DHTR" -500 -700 50 H V L BNN
+F2 "LGA16R50P5X3_300X300X100N" 0 0 50 H I L BNN
+F3 "LIS3DHTR" 0 0 50 H I L BNN
+F4 "https://www.digikey.com/product-detail/en/stmicroelectronics/LIS3DHTR/497-10613-1-ND/2334355?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" 0 0 50 H I L BNN
+F5 "MEMS digital output motion sensor ultra low-power high performance 3-axes nano accelerometer" 0 0 50 H I L BNN
+F6 "STMicroelectronics" 0 0 50 H I L BNN
+F7 "LGA-16 STMicroelectronics" 0 0 50 H I L BNN
+F8 "497-10613-1-ND" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -500 -600 500 -600 N
+P 2 0 0 10 -500 500 -500 -600 N
+P 2 0 0 10 500 -600 500 500 N
+P 2 0 0 10 500 500 -500 500 N
+X VDD_IO 1 600 300 100 L 40 40 0 0 W
+X RES 10 600 200 100 L 40 40 0 0 W
+X INT1 11 -600 100 100 R 40 40 0 0 I
+X GND 12 600 -500 100 L 40 40 0 0 W
+X ADC3 13 600 -200 100 L 40 40 0 0 I
+X VDD 14 600 400 100 L 40 40 0 0 W
+X ADC2 15 600 -100 100 L 40 40 0 0 I
+X ADC1 16 600 0 100 L 40 40 0 0 I
+X SCL/SPC 4 -600 -200 100 R 40 40 0 0 I
+X GND 5 600 -500 100 L 40 40 0 0 W
+X SDA/SDI/SDO 6 -600 -400 100 R 40 40 0 0 B
+X SDO/SA0 7 -600 -300 100 R 40 40 0 0 O
+X CS 8 -600 400 100 R 40 40 0 0 I
+X INT2 9 -600 0 100 R 40 40 0 0 I
+ENDDRAW
+ENDDEF
+#
+# Cluster-rescue_LM2596S-ADJ-Regulator_Switching
+#
+DEF Cluster-rescue_LM2596S-ADJ-Regulator_Switching U 0 20 Y Y 1 F N
+F0 "U" -400 250 50 H V L CNN
+F1 "Cluster-rescue_LM2596S-ADJ-Regulator_Switching" 0 250 50 H V L CNN
+F2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" 50 -250 50 H I L CIN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO?263*
+$ENDFPLIST
+DRAW
+S -400 200 400 -200 0 1 10 f
+X VIN 1 -500 100 100 R 50 50 1 1 W
+X OUT 2 500 -100 100 L 50 50 1 1 O
+X GND 3 0 -300 100 U 50 50 1 1 W
+X FB 4 500 100 100 L 50 50 1 1 I
+X ~ON~/OFF 5 -500 -100 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Cluster-rescue_L_Small-Device
+#
+DEF Cluster-rescue_L_Small-Device L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
-F1 "Device_L_Small" 30 -40 50 H V L CNN
+F1 "Cluster-rescue_L_Small-Device" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -444,11 +430,11 @@ X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R_Small
+# Cluster-rescue_R_Small-Device
 #
-DEF Device_R_Small R 0 10 N N 1 F N
+DEF Cluster-rescue_R_Small-Device R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "Device_R_Small" 30 -40 50 H V L CNN
+F1 "Cluster-rescue_R_Small-Device" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -461,31 +447,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Diode_1N5822
+# Cluster-rescue_SK6812-LED
 #
-DEF Diode_1N5822 D 0 40 N N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "Diode_1N5822" 0 -100 50 H V C CNN
-F2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" 0 -175 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS 1N5821 1N5822 MBR340
-$FPLIST
- D*DO?201AD*
-$ENDFPLIST
-DRAW
-P 2 0 1 0 50 0 -50 0 N
-P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
-P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# LED_SK6812
-#
-DEF LED_SK6812 D 0 10 Y Y 1 F N
+DEF Cluster-rescue_SK6812-LED D 0 10 Y Y 1 F N
 F0 "D" 200 225 50 H V R BNN
-F1 "LED_SK6812" 50 -225 50 H V L TNN
+F1 "Cluster-rescue_SK6812-LED" 50 -225 50 H V L TNN
 F2 "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm" 50 -300 50 H I L TNN
 F3 "" 100 -375 50 H I L TNN
 $FPLIST
@@ -508,14 +474,13 @@ X DOUT 4 300 0 100 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# MCU_ST_STM32F4_STM32F411RETx
+# Cluster-rescue_STM32F411RETx-MCU_ST_STM32F4
 #
-DEF MCU_ST_STM32F4_STM32F411RETx U 0 20 Y Y 1 F N
+DEF Cluster-rescue_STM32F411RETx-MCU_ST_STM32F4 U 0 20 Y Y 1 F N
 F0 "U" -600 1650 50 H V L CNN
-F1 "MCU_ST_STM32F4_STM32F411RETx" 400 1650 50 H V L CNN
+F1 "Cluster-rescue_STM32F411RETx-MCU_ST_STM32F4" 400 1650 50 H V L CNN
 F2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" -600 -1700 50 H I R CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS STM32F411RETx
 $FPLIST
  LQFP*10x10mm*P0.5mm*
 $ENDFPLIST
@@ -588,32 +553,39 @@ X PC1 9 -700 -200 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# Regulator_Switching_LM2596S-ADJ
+# Cluster-rescue_VCC-power
 #
-DEF Regulator_Switching_LM2596S-ADJ U 0 20 Y Y 1 F N
-F0 "U" -400 250 50 H V L CNN
-F1 "Regulator_Switching_LM2596S-ADJ" 0 250 50 H V L CNN
-F2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" 50 -250 50 H I L CIN
+DEF Cluster-rescue_VCC-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "Cluster-rescue_VCC-power" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS LM2596S-5 LM2596S-3.3 LM2596S-ADJ
-$FPLIST
- TO?263*
-$ENDFPLIST
 DRAW
-S -400 200 400 -200 0 1 10 f
-X VIN 1 -500 100 100 R 50 50 1 1 W
-X OUT 2 500 -100 100 L 50 50 1 1 O
-X GND 3 0 -300 100 U 50 50 1 1 W
-X FB 4 500 100 100 L 50 50 1 1 I
-X ~ON~/OFF 5 -500 -100 100 R 50 50 1 1 I
+C 0 75 25 0 1 0 N
+P 2 0 1 0 0 0 0 50 N
+X VCC 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# badge-cache_badge-rescue_HX4056
+# Cluster-rescue_VSS-power
 #
-DEF badge-cache_badge-rescue_HX4056 U 0 40 Y Y 1 F N
+DEF Cluster-rescue_VSS-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "Cluster-rescue_VSS-power" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 75 25 0 1 0 N
+P 2 0 1 0 0 0 0 50 N
+X VSS 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# Cluster-rescue_badge-rescue_HX4056-badge-cache
+#
+DEF Cluster-rescue_badge-rescue_HX4056-badge-cache U 0 40 Y Y 1 F N
 F0 "U" -250 200 50 H V C CNN
-F1 "badge-cache_badge-rescue_HX4056" 50 -300 50 H V C CNN
+F1 "Cluster-rescue_badge-rescue_HX4056-badge-cache" 50 -300 50 H V C CNN
 F2 "" -100 0 50 H I C CNN
 F3 "" -100 0 50 H I C CNN
 DRAW
@@ -628,46 +600,225 @@ X GND 9 400 -200 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# power_+12V
+# Connector_Generic_Conn_01x02
 #
-DEF power_+12V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+12V" 0 140 50 H V C CNN
+DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
 DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +12V 1 0 0 0 U 50 50 1 1 W N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power_VCC
+# Connector_Generic_Conn_01x06
 #
-DEF power_VCC #PWR 0 0 Y Y 1 F P
+DEF Connector_Generic_Conn_01x06 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x06" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -350 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic_Conn_01x08
+#
+DEF Connector_Generic_Conn_01x08 J 0 40 Y N 1 F N
+F0 "J" 0 400 50 H V C CNN
+F1 "Connector_Generic_Conn_01x08" 0 -500 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -395 0 -405 1 1 6 N
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 305 0 295 1 1 6 N
+S -50 350 50 -450 1 1 10 f
+X Pin_1 1 -200 300 150 R 50 50 1 1 P
+X Pin_2 2 -200 200 150 R 50 50 1 1 P
+X Pin_3 3 -200 100 150 R 50 50 1 1 P
+X Pin_4 4 -200 0 150 R 50 50 1 1 P
+X Pin_5 5 -200 -100 150 R 50 50 1 1 P
+X Pin_6 6 -200 -200 150 R 50 50 1 1 P
+X Pin_7 7 -200 -300 150 R 50 50 1 1 P
+X Pin_8 8 -200 -400 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic_Conn_01x11
+#
+DEF Connector_Generic_Conn_01x11 J 0 40 Y N 1 F N
+F0 "J" 0 600 50 H V C CNN
+F1 "Connector_Generic_Conn_01x11" 0 -600 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -495 0 -505 1 1 6 N
+S -50 -395 0 -405 1 1 6 N
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 305 0 295 1 1 6 N
+S -50 405 0 395 1 1 6 N
+S -50 505 0 495 1 1 6 N
+S -50 550 50 -550 1 1 10 f
+X Pin_1 1 -200 500 150 R 50 50 1 1 P
+X Pin_10 10 -200 -400 150 R 50 50 1 1 P
+X Pin_11 11 -200 -500 150 R 50 50 1 1 P
+X Pin_2 2 -200 400 150 R 50 50 1 1 P
+X Pin_3 3 -200 300 150 R 50 50 1 1 P
+X Pin_4 4 -200 200 150 R 50 50 1 1 P
+X Pin_5 5 -200 100 150 R 50 50 1 1 P
+X Pin_6 6 -200 0 150 R 50 50 1 1 P
+X Pin_7 7 -200 -100 150 R 50 50 1 1 P
+X Pin_8 8 -200 -200 150 R 50 50 1 1 P
+X Pin_9 9 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_C_Small
+#
+DEF Device_C_Small C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "Device_C_Small" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_LED_Small
+#
+DEF Device_LED_Small D 0 10 N N 1 F N
+F0 "D" -50 125 50 H V L CNN
+F1 "Device_LED_Small" -175 -100 50 H V L CNN
+F2 "" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -30 -40 -30 40 N
+P 2 0 1 0 40 0 -30 0 N
+P 4 0 1 0 30 -40 -30 0 30 40 30 -40 N
+P 5 0 1 0 0 30 -20 50 -10 50 -20 50 -20 40 N
+P 5 0 1 0 20 50 0 70 10 70 0 70 0 60 N
+X K 1 -100 0 70 R 50 50 1 1 P
+X A 2 100 0 70 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_L_Small
+#
+DEF Device_L_Small L 0 10 N N 1 F N
+F0 "L" 30 40 50 H V L CNN
+F1 "Device_L_Small" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40
+A 0 -20 20 -899 899 0 1 0 N 0 -40 0 0
+A 0 20 20 -899 899 0 1 0 N 0 0 0 40
+A 0 60 20 -899 899 0 1 0 N 0 40 0 80
+X ~ 1 0 100 20 D 50 50 1 1 P
+X ~ 2 0 -100 20 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R_Small
+#
+DEF Device_R_Small R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "Device_R_Small" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+# power_VDDA
+#
+DEF power_VDDA #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_VCC" 0 150 50 H V C CNN
+F1 "power_VDDA" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 C 0 75 25 0 1 0 N
 P 2 0 1 0 0 0 0 50 N
-X VCC 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_VSS
-#
-DEF power_VSS #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_VSS" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-C 0 75 25 0 1 0 N
-P 2 0 1 0 0 0 0 50 N
-X VSS 1 0 0 0 U 50 50 1 1 W N
+X VDDA 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
