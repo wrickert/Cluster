@@ -45,7 +45,7 @@ U 1 1 5BF76E42
 P 850 3050
 F 0 "J2" H 770 2725 50  0000 C CNN
 F 1 "Serial" H 770 2816 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 850 3050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 850 3050 50  0001 C CNN
 F 3 "~" H 850 3050 50  0001 C CNN
 	1    850  3050
 	-1   0    0    1   
@@ -207,7 +207,7 @@ U 1 1 5CA113CA
 P 4150 7000
 F 0 "J12" H 4229 7042 50  0000 L CNN
 F 1 "PowerReg" H 4229 6951 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4150 7000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4150 7000 50  0001 C CNN
 F 3 "~" H 4150 7000 50  0001 C CNN
 	1    4150 7000
 	1    0    0    -1  
@@ -346,7 +346,7 @@ U 1 1 5CA14813
 P 850 3750
 F 0 "J3" H 770 3425 50  0000 C CNN
 F 1 "i2c" H 770 3516 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 850 3750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 850 3750 50  0001 C CNN
 F 3 "~" H 850 3750 50  0001 C CNN
 	1    850  3750
 	-1   0    0    1   
@@ -567,7 +567,7 @@ U 1 1 5CA32F8F
 P 850 5650
 F 0 "J5" H 770 5125 50  0000 C CNN
 F 1 "GPIO" H 770 5216 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 850 5650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 850 5650 50  0001 C CNN
 F 3 "~" H 850 5650 50  0001 C CNN
 	1    850  5650
 	-1   0    0    1   
@@ -859,7 +859,7 @@ U 1 1 5CA5A15F
 P 2800 3750
 F 0 "J10" H 2880 3792 50  0000 L CNN
 F 1 "Conn_01x03" H 2880 3701 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 2800 3750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2800 3750 50  0001 C CNN
 F 3 "~" H 2800 3750 50  0001 C CNN
 	1    2800 3750
 	1    0    0    -1  
@@ -881,7 +881,7 @@ U 1 1 5CA78B24
 P 4500 2650
 F 0 "J13" H 4580 2692 50  0000 L CNN
 F 1 "Conn_01x03" H 4580 2601 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 4500 2650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4500 2650 50  0001 C CNN
 F 3 "~" H 4500 2650 50  0001 C CNN
 	1    4500 2650
 	1    0    0    -1  
@@ -892,7 +892,7 @@ U 1 1 5CA78CAF
 P 2900 2550
 F 0 "J11" H 2820 2225 50  0000 C CNN
 F 1 "Conn_01x02" H 2820 2316 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 2900 2550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2900 2550 50  0001 C CNN
 F 3 "~" H 2900 2550 50  0001 C CNN
 	1    2900 2550
 	-1   0    0    1   
@@ -1260,7 +1260,7 @@ U 1 1 5CAC98B1
 P 5350 4200
 F 0 "J14" H 5430 4242 50  0000 L CNN
 F 1 "ClkOUT" H 5430 4151 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 5350 4200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5350 4200 50  0001 C CNN
 F 3 "~" H 5350 4200 50  0001 C CNN
 	1    5350 4200
 	1    0    0    -1  
@@ -1690,7 +1690,7 @@ U 1 1 5CA57C7F
 P 2200 5650
 F 0 "J9" H 2000 3400 50  0000 C CNN
 F 1 "Conn_01x40" H 2100 3300 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x40_Pitch1.00mm" H 2200 5650 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x40_P1.00mm_Vertical" H 2200 5650 50  0001 C CNN
 F 3 "~" H 2200 5650 50  0001 C CNN
 	1    2200 5650
 	-1   0    0    1   
@@ -2354,7 +2354,7 @@ U 1 1 5DEDE3ED
 P 850 1900
 F 0 "J1" H 768 1175 50  0000 C CNN
 F 1 "FairingConnector" H 768 1266 50  0000 C CNN
-F 2 "" H 850 1900 50  0001 C CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00021_1x11_P5.00mm_Horizontal" H 850 1900 50  0001 C CNN
 F 3 "~" H 850 1900 50  0001 C CNN
 	1    850  1900
 	-1   0    0    1   
@@ -2365,7 +2365,7 @@ U 1 1 5DEF3A21
 P 2050 1950
 F 0 "J15" H 1968 1625 50  0000 C CNN
 F 1 "Conn_01x02" H 1968 1716 50  0000 C CNN
-F 2 "" H 2050 1950 50  0001 C CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00012_1x02_P5.00mm_Horizontal" H 2050 1950 50  0001 C CNN
 F 3 "~" H 2050 1950 50  0001 C CNN
 	1    2050 1950
 	-1   0    0    1   
@@ -2387,7 +2387,7 @@ U 1 1 5DF02103
 P 850 6500
 F 0 "J6" H 768 5975 50  0000 C CNN
 F 1 "Conn_01x06" H 768 6066 50  0000 C CNN
-F 2 "" H 850 6500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 850 6500 50  0001 C CNN
 F 3 "~" H 850 6500 50  0001 C CNN
 	1    850  6500
 	-1   0    0    1   

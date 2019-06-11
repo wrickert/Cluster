@@ -477,14 +477,6 @@ Text GLabel 9650 2850 2    50   Input ~ 0
 SWDIO
 Text GLabel 9650 2950 2    50   Input ~ 0
 SWCLK
-Text GLabel 9650 3550 2    50   Input ~ 0
-SWO
-Text GLabel 9650 3650 2    50   Input ~ 0
-JRST
-Text GLabel 1050 4650 2    50   Input ~ 0
-SWO
-Text GLabel 1050 4750 2    50   Input ~ 0
-JRST
 Text GLabel 1050 4450 2    50   Input ~ 0
 SWDIO
 Text GLabel 1050 4550 2    50   Input ~ 0
@@ -761,12 +753,6 @@ F 3 "" H 1050 6700 50  0001 C CNN
 	1    1050 6700
 	0    1    1    0   
 $EndComp
-Text GLabel 8250 3350 0    50   Input ~ 0
-MISO
-Text GLabel 8250 3450 0    50   Input ~ 0
-MOSI
-Text GLabel 9650 4250 2    50   Input ~ 0
-SCK
 Text GLabel 2400 6650 2    50   Input ~ 0
 SCK
 Text GLabel 2400 6250 2    50   Input ~ 0
@@ -870,7 +856,6 @@ NoConn ~ 8250 4350
 NoConn ~ 8250 4450
 NoConn ~ 9650 4150
 NoConn ~ 9650 4050
-NoConn ~ 9650 3750
 NoConn ~ 9650 3050
 NoConn ~ 9650 2650
 NoConn ~ 9650 2750
@@ -2299,7 +2284,6 @@ F 3 "" H 3800 7400 50  0001 C CNN
 	1    3800 7400
 	1    0    0    -1  
 $EndComp
-Connection ~ 3550 7400
 $Comp
 L Cluster-rescue:+12V-power #PWR032
 U 1 1 5DDD80CB
@@ -2392,4 +2376,15 @@ F 3 "~" H 850 6500 50  0001 C CNN
 	1    850  6500
 	-1   0    0    1   
 $EndComp
+Text GLabel 9650 3550 2    50   Input ~ 0
+SCK
+Text GLabel 9650 3750 2    50   Input ~ 0
+MISO
+Text GLabel 9650 3650 2    50   Input ~ 0
+MOSI
+NoConn ~ 9650 4250
+NoConn ~ 8250 3450
+NoConn ~ 8250 3350
+NoConn ~ 1050 4650
+NoConn ~ 1050 4750
 $EndSCHEMATC
